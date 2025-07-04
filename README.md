@@ -6,18 +6,31 @@ Breve descripción (¿qué problema resuelve?).
 Función	Qué hace
 
 hoy()	Devuelve la fecha actual en formato "yyyy-mm-dd"
+
 formatearFecha(fecha, formato)	Formatea una fecha en varios formatos ("dd/mm/yyyy", "mm-dd-yyyy", etc.)
+
 esFinDeSemana(fecha)	Devuelve true si la fecha es sábado o domingo
+
 sumarDias(fecha, dias)	Suma días a una fecha y devuelve la nueva fecha en "yyyy-mm-dd"
+
 restarDias(fecha, dias)	Resta días (usa sumarDias con valores negativos)
+
 diferenciaDias(fecha1, fecha2)	Diferencia en días entre dos fechas
+
 esFechaValida(fecha)	Valida si la fecha está en formato "yyyy-mm-dd" y es válida
+
 obtenerDiaSemana(fecha, locale)	Devuelve el día de la semana en texto, ej. "lunes"
+
 obtenerMes(fecha, locale)	Devuelve el mes en texto, ej. "julio"
+
 esBisiesto(anio)	Devuelve true si el año es bisiesto
+
 ultimoDiaMes(fecha)	Devuelve el último día del mes de la fecha dada
+
 fechaAleatoriaEntre(fechaInicio, fechaFin)	Devuelve una fecha aleatoria entre dos fechas
+
 sumarMeses(fecha, meses)	Suma meses a una fecha y devuelve la nueva fecha
+
 esFechaPasada(fecha)	Dice si la fecha ya pasó (antes del día actual)
 
 ![WhatsApp Image 2025-07-04 at 14 39 12](https://github.com/user-attachments/assets/70898770-2e3b-4e98-9cc9-ef4e6f8bd64d)
