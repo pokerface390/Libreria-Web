@@ -1,5 +1,5 @@
 # Libreria-Web
-![WhatsApp Image 2025-07-04 at 14 45 38](https://github.com/user-attachments/assets/62f8ab9d-f205-4108-9e34-f1a54d7b3d3b)
+![WhatsApp Image 2025-07-04 at 14 46 39](https://github.com/user-attachments/assets/64990557-e6ba-483d-a2f2-39995cabcdbd)
 
 Libreria Web
 Breve descripción (¿qué problema resuelve?).
