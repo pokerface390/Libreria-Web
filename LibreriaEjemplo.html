@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prueba fechaHelper con filtro</title>
+  <link rel="stylesheet" href="LibreriaEjemplo.css" />
+</head>
+<body>
+
+  <h1>Prueba Librearia</h1>
+
+  <label for="fechaInput">Fecha 1 (YYYY-MM-DD):</label>
+  <input type="date" id="fechaInput" value="2025-07-04" />
+
+  <label for="fechaInput2" id="labelFecha2" style="display:none;">Fecha 2 (para algunas funciones):</label>
+  <input type="date" id="fechaInput2" value="2025-07-10" style="display:none;" />
+
+  <label for="anioInput" id="labelAnio" style="display:none;">Año (para función bisiesto):</label>
+  <input type="number" id="anioInput" min="1900" max="2100" value="2024" style="display:none;" />
+
+  <label for="mesesInput" id="labelMeses" style="display:none;">Meses para sumar/restar:</label>
+  <input type="number" id="mesesInput" value="3" style="display:none;" />
+
+  <label for="funcionSelect">Elige función a ejecutar:</label>
+  <select id="funcionSelect">
+    <option value="hoy">Fecha hoy</option>
+    <option value="formatearFecha">Formatear fecha 1</option>
+    <option value="esFinDeSemana">¿Fecha 1 es fin de semana?</option>
+    <option value="sumarDias">Sumar 10 días a fecha 1</option>
+    <option value="restarDias">Restar 5 días a fecha 1</option>
+    <option value="diferenciaDias">Diferencia en días entre fecha 1 y fecha 2</option>
+    <option value="esFechaValida">¿Fecha 1 válida?</option>
+    <option value="obtenerDiaSemana">Nombre del día de la semana de fecha 1</option>
+    <option value="obtenerMes">Nombre del mes de fecha 1</option>
+    <option value="esBisiesto">¿Año es bisiesto?</option>
+    <option value="ultimoDiaMes">Último día del mes de fecha 1</option>
+    <option value="fechaAleatoriaEntre">Fecha aleatoria entre fecha 1 y fecha 2</option>
+    <option value="sumarMeses">Sumar meses a fecha 1</option>
+    <option value="esFechaPasada">¿Fecha 1 es pasada respecto a hoy?</option>
+  </select>
+
+  <button id="btnEjecutar">Ejecutar función</button>
+
+  <div id="resultado">Aquí aparecerá el resultado...</div>
+
+  <script src="/Libreria/fechaHelper.js"></script>
+  <script>
+    const f1 = document.getElementById('fechaInput');
+    const f2 = document.getElementById('fechaInput2');
+    const anio = document.getElementById('anioInput');
+    const meses = document.getElementById('mesesInput');
+    const funcionSelect = document.getElementById('funcionSelect');
+    const resultado = document.getElementById('resultado');
+    const labelFecha2 = document.getElementById('labelFecha2');
+    const labelAnio = document.getElementById('labelAnio');
+    const labelMeses = document.getElementById('labelMeses');
+
+    funcionSelect.addEventListener('change', () => {
+      const val = funcionSelect.value;
+      f2.style.display = 'none';
+      labelFecha2.style.display = 'none';
+      anio.style.display = 'none';
+      labelAnio.style.display = 'none';
+      meses.style.display = 'none';
+      labelMeses.style.display = 'none';
+
+      // Mostrar inputs necesarios
+      if (val === 'diferenciaDias' || val === 'fechaAleatoriaEntre') {
+        f2.style.display = 'block';
+        labelFecha2.style.display = 'block';
+      }
+      if (val === 'esBisiesto') {
+        anio.style.display = 'block';
+        labelAnio.style.display = 'block';
+      }
+      if (val === 'sumarMeses') {
+        meses.style.display = 'block';
+        labelMeses.style.display = 'block';
+      }
+    });
+
+    document.getElementById('btnEjecutar').addEventListener('click', () => {
+      const f1val = f1.value;
+      const f2val = f2.value;
+      const anioval = parseInt(anio.value, 10);
+      const mesesval = parseInt(meses.value, 10);
+      let res;
+
+      if (['formatearFecha','esFinDeSemana','sumarDias','restarDias','esFechaValida',
+        'obtenerDiaSemana','obtenerMes','ultimoDiaMes','sumarMeses','esFechaPasada'].includes(funcionSelect.value)) {
+        if (!fechaHelper.esFechaValida(f1val)) {
+          resultado.textContent = "Fecha 1 no válida o vacía.";
+          return;
+        }
+      }
+
+      if (['diferenciaDias','fechaAleatoriaEntre'].includes(funcionSelect.value)) {
+        if (!fechaHelper.esFechaValida(f1val) || !fechaHelper.esFechaValida(f2val)) {
+          resultado.textContent = "Fecha 1 o Fecha 2 no válidas o vacías.";
+          return;
+        }
+      }
+
+      switch(funcionSelect.value) {
+        case 'hoy':
+          res = fechaHelper.hoy();
+          break;
+        case 'formatearFecha':
+          res = fechaHelper.formatearFecha(f1val, "dd/mm/yyyy");
+          break;
+        case 'esFinDeSemana':
+          res = fechaHelper.esFinDeSemana(f1val) ? "Sí, es fin de semana." : "No, es día de semana.";
+          break;
+        case 'sumarDias':
+          res = fechaHelper.sumarDias(f1val, 10);
+          break;
+        case 'restarDias':
+          res = fechaHelper.restarDias(f1val, 5);
+          break;
+        case 'diferenciaDias':
+          res = fechaHelper.diferenciaDias(f1val, f2val) + " días";
+          break;
+        case 'esFechaValida':
+          res = fechaHelper.esFechaValida(f1val) ? "Sí, es válida." : "No, no es válida.";
+          break;
+        case 'obtenerDiaSemana':
+          res = fechaHelper.obtenerDiaSemana(f1val);
+          break;
+        case 'obtenerMes':
+          res = fechaHelper.obtenerMes(f1val);
+          break;
+        case 'esBisiesto':
+          res = fechaHelper.esBisiesto(anioval) ? "Sí, es año bisiesto." : "No, no es año bisiesto.";
+          break;
+        case 'ultimoDiaMes':
+          res = fechaHelper.ultimoDiaMes(f1val);
+          break;
+        case 'fechaAleatoriaEntre':
+          res = fechaHelper.fechaAleatoriaEntre(f1val, f2val);
+          break;
+        case 'sumarMeses':
+          res = fechaHelper.sumarMeses(f1val, mesesval);
+          break;
+        case 'esFechaPasada':
+          res = fechaHelper.esFechaPasada(f1val) ? "Sí, es pasada." : "No, no es pasada.";
+          break;
+        default:
+          res = "Función no soportada.";
+      }
+
+      resultado.textContent = res;
+    });
+
++    funcionSelect.dispatchEvent(new Event('change'));
+  </script>
+
+</body>
+</html>
