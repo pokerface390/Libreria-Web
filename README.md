@@ -4,6 +4,7 @@
 Libreria Web
 Breve descripción (¿qué problema resuelve?).
 Función	Qué hace
+
 hoy()	Devuelve la fecha actual en formato "yyyy-mm-dd"
 formatearFecha(fecha, formato)	Formatea una fecha en varios formatos ("dd/mm/yyyy", "mm-dd-yyyy", etc.)
 esFinDeSemana(fecha)	Devuelve true si la fecha es sábado o domingo
