@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/445108d6-5604-4fb2-8380-fa55e8b30d7f)# Libreria-Web
+ Libreria-Web
 ![WhatsApp Image 2025-07-04 at 18 19 31](https://github.com/user-attachments/assets/d6bef53a-f0c9-4cf3-b31b-8c40e9706540)
 
 Libreria Web
