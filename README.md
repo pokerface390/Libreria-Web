@@ -1,4 +1,4 @@
-# Libreria-Web
+![image](https://github.com/user-attachments/assets/445108d6-5604-4fb2-8380-fa55e8b30d7f)# Libreria-Web
 ![WhatsApp Image 2025-07-04 at 18 19 31](https://github.com/user-attachments/assets/d6bef53a-f0c9-4cf3-b31b-8c40e9706540)
 
 Libreria Web
@@ -39,7 +39,13 @@ Se abre desde Visual studio y como se puede ver se crea primero un ejemplo de ht
 
 ![image](https://github.com/user-attachments/assets/a6455441-67f7-4b68-8dbf-9e8eb01c856e)
 
+en este apartado podemos observar como ponemos el URL 
+
+![image](https://github.com/user-attachments/assets/52e63d89-5821-483b-a4e2-9c6771a0511f)
+
+
 y los ejemplos de como se relizaron
+
 ![WhatsApp Image 2025-07-04 at 14 41 57](https://github.com/user-attachments/assets/d241e642-e8c6-488c-b228-be6f1c2554b3)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (3)](https://github.com/user-attachments/assets/1848b069-49df-42ac-8729-e6cbacf99fa5)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (2)](https://github.com/user-attachments/assets/16e686a6-e339-4872-85db-f34f7c7c82ba)
