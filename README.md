@@ -44,6 +44,11 @@ en este apartado podemos observar como ponemos el URL
 
 ![image](https://github.com/user-attachments/assets/52e63d89-5821-483b-a4e2-9c6771a0511f)
 
+aqui se ve mejor el URL dee la libreria
+
+![image](https://github.com/user-attachments/assets/a7c3c370-81d5-4a23-9f65-15b49240a23d)
+
+
 
 y los ejemplos de como se relizaron
 
@@ -52,5 +57,8 @@ y los ejemplos de como se relizaron
 ![WhatsApp Image 2025-07-04 at 14 41 58 (2)](https://github.com/user-attachments/assets/16e686a6-e339-4872-85db-f34f7c7c82ba)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (1)](https://github.com/user-attachments/assets/0705f22d-d91c-4ad6-9f1f-002ce5411a16)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (1)](https://github.com/user-attachments/assets/e5051b6a-1018-486b-bd68-dff85b435c0c)
+
+Video:
+https://youtu.be/zBXvptCvy78
 
 
