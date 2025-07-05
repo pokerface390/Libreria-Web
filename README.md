@@ -35,6 +35,10 @@ esFechaPasada(fecha)	Dice si la fecha ya pasó (antes del día actual)
 
 ![WhatsApp Image 2025-07-04 at 14 39 12](https://github.com/user-attachments/assets/70898770-2e3b-4e98-9cc9-ef4e6f8bd64d)
 
+Se abre desde Visual studio y como se puede ver se crea primero un ejemplo de html
+![image](https://github.com/user-attachments/assets/a6455441-67f7-4b68-8dbf-9e8eb01c856e)
+
+y los ejemplos de como se relizaron
 ![WhatsApp Image 2025-07-04 at 14 41 57](https://github.com/user-attachments/assets/d241e642-e8c6-488c-b228-be6f1c2554b3)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (3)](https://github.com/user-attachments/assets/1848b069-49df-42ac-8729-e6cbacf99fa5)
 ![WhatsApp Image 2025-07-04 at 14 41 58 (2)](https://github.com/user-attachments/assets/16e686a6-e339-4872-85db-f34f7c7c82ba)
